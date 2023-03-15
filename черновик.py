@@ -4,7 +4,16 @@
 # Напишите программу, которая удаляет из этой строки первое и 
 # последнее вхождение буквы «h», а также все символы, находящиеся между ними.
 
-s = input("Введите текст: ")
-s1 = s[:s.find('h')] + s[s.rfind('h')+1:]
-print(s1)
-print(s.rfind('h')+1)
+s = input()
+count = 0
+if s.count('f') == 1:
+    print(-1)
+elif s.count('f') == 0:
+    print(-2)
+else:
+    for i in range(len(s)):
+        if s[i] == 'f':
+            count += 1
+            if count > 1:
+                print(i)
+                break
