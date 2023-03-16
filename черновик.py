@@ -4,16 +4,10 @@
 # Напишите программу, которая удаляет из этой строки первое и 
 # последнее вхождение буквы «h», а также все символы, находящиеся между ними.
 
-s = input()
-count = 0
-if s.count('f') == 1:
-    print(-1)
-elif s.count('f') == 0:
-    print(-2)
-else:
-    for i in range(len(s)):
-        if s[i] == 'f':
-            count += 1
-            if count > 1:
-                print(i)
-                break
+languages = ['Chinese', 'Spanish', 'English', 'Hindi', 'Arabic', 'Bengali', 'Portuguese', 'Russian', 'Japanese', 'Lahnda']
+language = []
+j = 0
+for i in range(-1, -len(languages),-1):
+    language[i] = languages[i]
+    j += 1
+print(language)
