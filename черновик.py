@@ -4,16 +4,14 @@
 # Напишите программу, которая удаляет из этой строки первое и 
 # последнее вхождение буквы «h», а также все символы, находящиеся между ними.
 
-a = [5, 1, 8, 2, 4]
-n = len(a)
+model = int(input())
 
-for i in range(1, n): 
-    elem = a[i]  # первый элемент из неотсортированной части списка
-    j = i
-    while j >= 1 and a[j - 1] > elem: 
-        a[j] = a[j - 1]
-        j -= 1
-    a[j] = elem
-
-
-print('Отсортированный список:', a)
+def is_invalid(model):
+    if model != 100 and model != 200 and model != 300:
+        return True
+    else:
+        return False
+    
+while is_invalid(model):
+    print('Допустимыми номерами моделей являются 100, 200 и 300.')
+    model = int(input())
